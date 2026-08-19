@@ -49,15 +49,3 @@ Repositório centralizado para armazenamento, documentação e versionamento de 
 * Análise descritiva de dados, probabilidade (Teorema de Bayes), distribuições discretas (Binomial/Poisson) e contínuas (Normal).
 
 ---
-
-## 📁 Estrutura de Pastas do Repositório
-
-O repositório é organizado de forma semântica de acordo com as disciplinas do semestre:
-
-```text
-College-Projects-and-Activities/
-├── database-management/       # Scripts SQL (DDL/DML), modelagens relacionais e T-SQL (BD 2)
-├── frontend-abp/              # Aplicação Web em React e projetos de interface (ABP)
-├── physics-lab/               # Relatórios experimentais, dados e simulações de Física 2
-├── calculus-methods/          # Resolução de problemas aplicados e métodos de Cálculo 2
-└── statistics-analytical/     # Exercícios de análise de dados e probabilidades
