@@ -1,0 +1,179 @@
+<!-- Indica ao navegador que este arquivo usa a versão mais recente do HTML (HTML5) -->
+<!DOCTYPE html>
+
+<!-- Tag principal que engloba todo o documento e define o idioma da página como inglês (en) -->
+<html lang="en">
+
+<!-- A tag <head> guarda as configurações e informações internas da página (que não aparecem diretamente na tela) -->
+<head>
+
+    <!-- Define a codificação de caracteres como UTF-8, garantindo que acentos e símbolos especiais sejam exibidos corretamente -->
+    <meta charset="UTF-8">
+
+    <!-- Configura a página para ajustar o tamanho da tela e o zoom corretamente em dispositivos móveis (celulares/tablets) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Define o título da página que aparece na aba do navegador -->
+    <title>Open Board</title>
+
+<!-- Fecha a seção de configurações da página -->
+</head>
+
+<!-- A tag <body> contém todo o conteúdo visível da página (textos, imagens, botões, etc.) -->
+<body>
+
+    <!-- Cabeçalho principal do site (menu superior/topo) -->
+    <header>
+        <h1>OpenBoard</h1> <!-- Título principal da marca no cabeçalho -->
+        <a href="">Entrar</a> <!-- Link de navegação para a página de login -->
+        <button>Publicar vaga $299</button> <!-- Botão para a ação de publicar uma vaga com o valor -->
+    </header>
+
+    <!-- <section> define uma seção temática da página (neste caso, o banner principal de apresentação) -->
+    <section>
+        <h2>As melhores vagas em startups de tecnologia</h2> <!-- <h2> é um título secundário (subtítulo) da seção -->
+        <p>Encontre oportunidades reais em empresas curadas. Sem cadastro, sem barreiras</p> <!-- <p> define um parágrafo de texto comum -->
+        <button>Publicar vaga $299</button> <!-- Botão para publicação de vaga no banner principal -->
+    </section>
+
+    <!-- O <main> engloba o conteúdo principal e mais importante da página -->
+    <main>
+
+        <!-- <aside> representa um conteúdo lateral/periférico ao conteúdo principal (usado aqui para a barra de filtros) -->
+        <aside>
+            <h3>Filtros</h3> <!-- Título da seção de filtros -->
+            <a href="">Limpar</a> <!-- Link para limpar os filtros selecionados -->
+
+            <!-- <div> cria um bloco genérico para agrupar elementos relacionados (grupo de filtros por tipo) -->
+            <div>
+                <p>Tipo de Vaga</p> <!-- Parágrafo rotulando o grupo de filtros -->
+
+                <!-- <label> associa um texto explicativo ao campo de entrada (input), melhorando a acessibilidade -->
+                <label for="check_efetivo">
+                    
+                    <!-- <input type="checkbox"> cria uma caixa de entrada de seleção do tipo marcar/desmarcar -->
+                    <input type="checkbox" name="check_efetivo" id="check_efetivo">Efetivo
+                </label>
+                
+                <label for="check_estagio">
+                    <input type="checkbox" name="check_estagio" id="check_estagio">Estágio
+                </label>
+                <label for="check_temporario">
+                    <input type="checkbox" name="check_temporario" id="check_temporario">Temporário
+                </label>
+            </div>
+
+            <!-- Bloco para agrupamento dos filtros por área -->
+            <div>
+                <p>Área</p>
+
+                <label for="check_engenharia">
+                    <input type="checkbox" name="check_engenharia" id="check_engenharia">Engenharia
+                </label>
+                
+                <label for="check_design">
+                    <input type="checkbox" name="check_design" id="check_design">Design
+                </label>
+                <label for="check_gestao">
+                    <input type="checkbox" name="check_gestao" id="check_gestao">Gestão
+                </label>
+            </div>
+        </aside>
+
+        <!-- <section> interna do <main> que exibe a listagem das vagas disponíveis -->
+        <section>
+            <h2>Últimas vagas</h2> 
+            <span>7 vagas - Atualizado agora</span> <!-- <span> é um container em linha para pequenas partes de texto ou metadados sem quebra de linha -->
+            
+            <!-- Bloco de cartão/card contendo as informações de uma vaga individual -->
+            <div>
+                <small>Vercel</small> <!-- <small> deixa o texto em uma escala menor (útil para nomes de empresas, notas ou detalhes) -->
+                <img src="" alt="logo"> <!-- <img> exibe uma imagem (o atributo src define o caminho e o alt é o texto alternativo caso a imagem não carregue) -->
+                <p>Full-Stack Engineer</p>
+
+                <!-- Metadados da vaga: faixa salarial, modalidade e tempo de publicação -->
+                <span>R$ 20k-30k</span>
+                <span>Remoto</span>
+                <span>4h</span>
+
+
+                <a href="">Candidatar-se</a> <!-- Link direto para aplicação na vaga -->
+            </div>
+        </section>
+
+    <!-- Fecha o bloco de conteúdo principal da página -->
+    </main>
+
+    <!-- <section> destinada à captura de inscritos para a newsletter -->
+    <section>
+        <h2>Vagas novas, toda quinta-feira</h2>
+        <p>Um resumo curto das melhores vagas em startups direto no seu inbox</p>
+
+        <!-- Bloco para organizar o formulário de inscrição -->
+        <div>
+
+            <!-- <form> cria um formulário para coleta de dados do usuário -->
+            <form action="">
+
+                <input type="text" name="" id="" placeholder="seu@email.com"> <!-- <input type="text"> cria um campo de entrada para digitação de texto (placeholder exibe o texto de dica/exemplo dentro do campo) -->
+                <button>Assinar</button> <!-- Botão para enviar os dados do formulário -->
+            </form>
+        </div>
+        
+    </section>
+
+    <!-- <section> com os depoimentos e prova social dos usuários -->
+    <section>
+        <h2>Quem já usa o OverBoard</h2>
+        <p>Depoimentos de recrutadores e candidatos que fecharam vaga por aqui</p>
+
+        <!-- Primeiro card de depoimento -->
+        <div>
+            <p>"Encontrei minha vaga atual scrollando num sábado. Aplicação em dois cliques."</p>
+
+            <img src="" alt="avatar"> <!-- Foto do autor do depoimento -->
+            <p>Lucas Vergara</p>
+            <span>Frontend Engineer - Betha</span> <!-- Cargo e empresa do autor -->
+        </div>
+
+        <!-- Segundo card de depoimento -->
+         <div>
+            <p>"Contratei duas designers em menos de uma semana. Formulário simples e público certo."</p>
+
+            <img src="" alt="avatar">
+            <p>Marina Costa</p>
+            <span>Backend Engineer - Vercel</span>
+        </div>
+
+        <!-- Terceiro card de depoimento -->
+         <div>
+            <p>"Melhor ROI de anúncio que já tivemos para tech. Voltamos todo trimestre."</p>
+
+            <img src="" alt="avatar">
+            <p>Andre Lima</p>
+            <span>Founder - Retool BR</span>
+        </div>
+        
+    </section>
+
+    <!-- <footer> define o rodapé institucional no final da página -->
+    <footer>
+
+        <!-- Texto com o nome da marca e direitos autorais -->
+        OpenBoard
+        2026 - Todos os direitos reservados
+
+        <!-- <nav> indica um bloco dedicado à navegação principal ou secundária de links -->
+        <nav>
+            <a href="">Entrar</a>
+            <a href="">Publicar Vaga</a>
+            <a href="">Sobre</a>
+            <a href="">Privacidade</a>
+        </nav>
+    </footer>
+
+<!-- Fecha o corpo da página -->
+</body>
+
+<!-- Fecha o documento HTML -->
+</html>
