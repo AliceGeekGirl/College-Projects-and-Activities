@@ -1,0 +1,131 @@
+/* RESET GLOBAL */
+/* Seleciona TODOS os elementos da página (*) */
+* {
+    margin: 0; /* Remove as margens externas padrão de todos os elementos */
+    padding: 0; /* Remove os espaçamentos internos padrão de todos os elementos */
+    box-sizing: border-box; /* Inclui a borda e o padding no cálculo da largura e altura totais do elemento */
+}
+
+/* Estiliza o corpo (fundo) e a cor geral da página */
+body {
+    background-color: #fafaf9; /* Define a cor de fundo da página para um tom off-white/cinza bem claro */
+    color: #111111; /* Define a cor padrão do texto para um cinza escuro/quase preto */
+}
+
+/* Estiliza o cabeçalho no topo do site */
+header {
+    display: flex; /* Ativa o layout Flexbox para alinhar os elementos lado a lado */
+    justify-content: space-between; /* Espaça o título e as ações nas extremidades opostas (esquerda e direita) */
+    align-items: center; /* Alinha os elementos verticalmente ao centro dentro do cabeçalho */
+    padding: 16px 40px; /* Adiciona espaçamento interno de 16px acima/abaixo e 40px nas laterais */
+    border-bottom: 1px solid #e5e5e3; /* Cria uma linha divisória cinza fina na parte inferior do cabeçalho */
+}
+
+/* Estiliza a seção de destaque (banner hero) */
+.hero {
+    padding: 100px 40px; /* Define um espaçamento interno grande: 100px em cima/embaixo e 40px nas laterais */
+    text-align: center; /* Centraliza horizontalmente todo o texto contido dentro da seção */
+}
+
+/* Estiliza o título principal dentro da seção hero */
+.hero h2 {
+   font-size: 48px; /* Aumenta o tamanho da fonte do título para 48 pixels */
+}
+
+/* Estiliza o parágrafo explicativo dentro da seção hero */
+.hero p {
+    margin-bottom: 32px; /* Adiciona um espaço de 32 pixels abaixo do parágrafo, empurrando o elemento seguinte */
+}
+
+/* Classe reutilizável para botões */
+.btn {
+    color: #ffffff; /* Define a cor do texto do botão como branco */
+    background-color: #111111; /* Define a cor de fundo do botão para preto/cinza escuro */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 8px; /* Arredonda os cantos da borda do botão em 8 pixels */
+    padding: 12px 20px; /* Define o espaçamento interno do botão: 12px acima/abaixo e 20px nas laterais */
+    font-size: 14px; /* Define o tamanho do texto do botão para 14 pixels */
+    font-weight: bold; /* Deixa o texto do botão em negrito */
+}
+
+/* Estiliza a área do conteúdo principal */
+.conteudo {
+    display: flex; /* Ativa o layout Flexbox no container principal */
+    flex-direction: row-reverse; /* Inverte a ordem dos filhos (coloca os filtros na esquerda e as vagas na direita) */
+    padding: 40px; /* Adiciona um espaçamento interno de 40 pixels em toda a volta do container */
+}
+
+/* Estiliza a seção que agrupa a lista de vagas */
+.vagas {
+    width: 100%; /* Faz a lista de vagas ocupar 100% da largura disponível */
+}
+
+/* Estiliza o topo da lista de vagas (título e contador) */
+.vagas__header {
+    display: flex; /* Ativa o layout Flexbox */
+    justify-content: space-between; /* Coloca o título à esquerda e o contador à direita */
+}
+
+/* Estiliza cada cartão individual de vaga */
+.vagas__card {
+    display: flex; /* Ativa o layout Flexbox para organizar logo, detalhes e ação */
+    justify-content: space-between; /* Espaça as informações internas entre as extremidades do cartão */
+    width: 100%; /* Faz o cartão de vaga ocupar toda a largura da seção de vagas */
+}
+
+/* Estiliza o menu lateral de filtros */
+.filtros {
+    width: 220px; /* Fixa a largura da barra lateral de filtros em 220 pixels */
+}
+
+/* Estiliza o topo da barra de filtros */
+.filtros__header {
+    display: flex; /* Ativa o layout Flexbox */
+    justify-content: space-between; /* Separa o título "Filtros" do link "limpar" nas pontas */
+}
+
+/* Estiliza cada grupo de itens de filtro */
+.filtros__itens {
+    display: flex; /* Ativa o layout Flexbox */
+    flex-direction: column; /* Empilha os campos de seleção (checkboxes) verticalmente em coluna */
+    gap: 12px; /* Adiciona um espaço de 12 pixels entre cada opção do filtro */
+    padding-bottom: 20px; /* Adiciona um espaçamento de 20 pixels no fundo do bloco */
+}
+
+/* Estiliza os rótulos de categoria dentro dos filtros */
+.filtros__itens p {
+    font-size: 12px; /* Reduz o tamanho da fonte para 12 pixels */
+    font-weight: bold; /* Aplica negrito no título do grupo do filtro */
+    margin: 8px 0; /* Adiciona 8 pixels de margem em cima/embaixo e 0 nas laterais */
+}
+
+/* Estiliza o campo de digitação do formulário de cadastro */
+.cadastro input {
+    padding: 12px 20px; /* Define o espaçamento interno do campo de texto: 12px vertical e 20px horizontal */
+    font-size: 14px; /* Define o tamanho do texto digitado para 14 pixels */
+    border: 1px solid #ddd; /* Cria uma borda fina cinza-clara em volta do campo */
+    border-radius: 8px; /* Arredonda os cantos da caixa de texto em 8 pixels */
+}
+
+/* Estiliza o container da seção de depoimentos */
+.depoimentos {
+    display: flex; /* Ativa o layout Flexbox */
+    padding: 100px 40px; /* Aplica espaçamento interno de 100px acima/abaixo e 40px nas laterais */
+    flex-direction: column; /* Organiza os elementos da seção (título, descrição, lista) em coluna */
+    align-items: center; /* Centraliza todos os elementos filhos na horizontal */
+    gap: 12px; /* Adiciona um espaço de 12 pixels entre os elementos da seção */
+}
+
+/* Estiliza a lista que segura os cartões de depoimento */
+.depoimentos__list {
+    display: flex; /* Ativa o layout Flexbox para dispor os depoimentos lado a lado */
+    padding-top: 40px; /* Adiciona um espaçamento de 40 pixels acima da lista */
+    gap: 32px; /* Define um espaço de 32 pixels entre cada cartão de depoimento */
+}
+
+/* Estiliza a barra de rodapé no final do site */
+footer {
+    display: flex; /* Ativa o layout Flexbox */
+    justify-content: space-between; /* Espaça o texto de copyright e os links de navegação nas pontas */
+    padding: 16px 40px; /* Define o espaçamento interno: 16px em cima/embaixo e 40px nas laterais */
+}
