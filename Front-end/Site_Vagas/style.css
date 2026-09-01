@@ -93,12 +93,20 @@ header {
     justify-content: center;
     align-items: center;
     width: 60px;
-    height: 60%;
-    margin: 8px;;
+    height: 60px;
+    margin: 8px;
     background-color: black;
     color: white;
     border-radius: 4px;
 
+}
+
+.vagas__avatar--blue{
+    background-color: blue;
+}
+
+.vagas__avatar--orange{
+    background-color: orange;
 }
 .vagas_body{
     width: 100%;

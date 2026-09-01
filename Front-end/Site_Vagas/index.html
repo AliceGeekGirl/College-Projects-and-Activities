@@ -46,6 +46,7 @@
 
     <!-- O <main> engloba o conteúdo principal e mais importante da página -->
     <main class="conteudo">
+
         <!-- <section> interna do <main> que exibe a listagem das vagas disponíveis -->
         <section class="vagas">
 
@@ -56,59 +57,78 @@
             </div>
 
             <!-- Bloco de cartão/card contendo as informações de uma vaga individual -->
-            <div class="vagas__card">
-                <img src="" alt="logo"> <!-- <img> exibe uma imagem (o atributo src define o caminho e o alt é o texto alternativo caso a imagem não carregue) -->
-                <!-- Grupo de informações textuais e metadados da vaga -->
-                 <div class="vagas__avatar">V</div>
+            <div class="vagas__card"> 
+                <div class="vagas__avatar">V</div>
                 <div class="vagas_body">
                     <small>Vercel</small> <!-- <small> deixa o texto em uma escala menor (útil para nomes de empresas, notas ou detalhes) -->
                     <p class="vagas__title">Full-stack Engineer</p>
+
                     <!-- Metadados da vaga: faixa salarial e modalidade -->
                     <span class="vagas__bagdes">R$ 20k-30k</span>
                     <span class="vagas__bagdes vagas__bagdes--highlight">Remoto</span>
                 </div>
+
                 <!-- Grupo com o tempo de publicação e link de candidatura -->
                 <div class="vagas__actions">
                     <span>4h</span>
+
                     <a href="">Candidatar-se</a> <!-- Link direto para aplicação na vaga -->
                 </div>
             </div>
 
              <!-- Bloco de cartão/card contendo as informações de uma vaga individual -->
             <div class="vagas__card">
-                <img src="" alt="logo"> <!-- <img> exibe uma imagem (o atributo src define o caminho e o alt é o texto alternativo caso a imagem não carregue) -->
-                <!-- Grupo de informações textuais e metadados da vaga -->
-                 <div class="vagas__avatar">V</div>
+
+                <!-- Container que exibe a inicial ou o logo da empresa (Notion) -->
+                <div class="vagas__avatar vagas__avatar--blue">N</div>
+
+                <!-- Bloco com as informações principais do cargo e detalhes da vaga -->
                 <div class="vagas_body">
-                    <small>Vercel</small> <!-- <small> deixa o texto em uma escala menor (útil para nomes de empresas, notas ou detalhes) -->
-                    <p class="vagas__title">Full-stack Engineer</p>
-                    <!-- Metadados da vaga: faixa salarial e modalidade -->
-                    <span class="vagas__bagdes">R$ 20k-30k</span>
-                    <span class="vagas__bagdes vagas__bagdes--highlight">Remoto</span>
+
+                    <small>Notion</small> <!-- Nome da empresa em tamanho reduzido -->
+
+                    <p class="vagas__title">Backend Engineer</p> <!-- Título/Nome do cargo fornecido -->
+
+                    <!-- Badges com as características da vaga (salário e localização) -->
+                    <span class="vagas__bagdes">R$ 22k-3k</span>
+
+                    <!-- Utiliza a classe modificadora '--highlight' para destacar a localização -->
+                    <span class="vagas__bagdes vagas__bagdes--highlight">São Paulo, <br></span>
                 </div>
-                <!-- Grupo com o tempo de publicação e link de candidatura -->
+
+                <!-- Container com ações e informações secundárias da vaga -->
                 <div class="vagas__actions">
-                    <span>4h</span>
-                    <a href="">Candidatar-se</a> <!-- Link direto para aplicação na vaga -->
+
+                    <span>1d</span> <!-- Tempo decorrido desde a publicação (1 dia) -->
+
+                    <a href="">Candidatar-se</a> <!-- Link de direcionamento para aplicação -->
                 </div>
             </div>
 
-             <!-- Bloco de cartão/card contendo as informações de uma vaga individual -->
+            <!-- 3º CARD DE VAGA -->
             <div class="vagas__card">
-                <img src="" alt="logo"> <!-- <img> exibe uma imagem (o atributo src define o caminho e o alt é o texto alternativo caso a imagem não carregue) -->
-                <!-- Grupo de informações textuais e metadados da vaga -->
-                 <div class="vagas__avatar">V</div>
+
+                <!-- Container que exibe a inicial da empresa (Figma) -->
+                <div class="vagas__avatar vagas__avatar--orange">V</div>
+
+                <!-- Bloco com as informações principais do cargo e detalhes da vaga -->
                 <div class="vagas_body">
-                    <small>Vercel</small> <!-- <small> deixa o texto em uma escala menor (útil para nomes de empresas, notas ou detalhes) -->
-                    <p class="vagas__title">Full-stack Engineer</p>
-                    <!-- Metadados da vaga: faixa salarial e modalidade -->
-                    <span class="vagas__bagdes">R$ 20k-30k</span>
-                    <span class="vagas__bagdes vagas__bagdes--highlight">Remoto</span>
+
+                    <small>Figma</small> <!-- Nome da empresa em tamanho reduzido -->
+
+                    <p class="vagas__title">Design Systems Lead</p> <!-- Título/Nome do cargo fornecido -->
+
+                    <!-- Badges com a faixa salarial e a localização internacional -->
+                    <span class="vagas__bagdes">R$ 25k-35k</span>
+                    <span class="vagas__bagdes vagas__bagdes--highlight">New York</span>
                 </div>
-                <!-- Grupo com o tempo de publicação e link de candidatura -->
+
+                <!-- Container com tempo de publicação e botão/link de ação -->
                 <div class="vagas__actions">
-                    <span>4h</span>
-                    <a href="">Candidatar-se</a> <!-- Link direto para aplicação na vaga -->
+
+                    <span>2</span> <!-- Tempo decorrido desde a publicação -->
+
+                    <a href="">Candidatar-se</a> <!-- Link de direcionamento para aplicação -->
                 </div>
             </div>
 
@@ -116,57 +136,77 @@
 
         <!-- <aside> representa um conteúdo lateral/periférico ao conteúdo principal (usado aqui para a barra de filtros) -->
         <aside class="filtros">
+
             <!-- Cabeçalho da barra lateral contendo o título e ação de limpar -->
             <div class="filtros__header">
+
                 <h3>Filtros</h3> <!-- Título da seção de filtros -->
-                <a href="">limpar</a> <!-- Link para limpar os filtros selecionados -->
+
+                <a href="">Limpar</a> <!-- Link para limpar os filtros selecionados -->
             </div>
 
             <!-- <div> cria um bloco genérico para agrupar elementos relacionados (grupo de filtros por tipo) -->
             <div class="filtros__itens">
                 <p>Tipo de vaga</p> <!-- Parágrafo rotulando o grupo de filtros -->
+
                 <!-- <label> associa um texto explicativo ao campo de entrada (input), melhorando a acessibilidade -->
                 <label for="check_efetivo">
+
                     <!-- <input type="checkbox"> cria uma caixa de seleção marcar/desmarcar; name e id identificam o campo para formulário e acionamento por script -->
+
                     <input type="checkbox" name="check_efetivo" id="check_efetivo"> Efetivo <!-- Texto do rótulo exibido ao lado da caixa de seleção -->
                 </label> <!-- Fecha a tag <label> do filtro de vaga tipo Efetivo -->
 
                 <!-- <label> associa o texto ao campo com id="check_estagio" para acionamento ao clicar no texto -->
                 <label for="check_estagio">
+
                     <!-- Caixa de seleção específica para filtrar vagas de estágio -->
                     <input type="checkbox" name="check_estagio" id="check_estagio"> Estágio <!-- Rótulo visível para opção Estágio -->
+
                 </label> <!-- Fecha a tag <label> da opção Estágio -->
 
                 <!-- <label> associa o texto ao campo com id="check_temp" para acionamento ao clicar no texto -->
                 <label for="check_temp">
+
                     <!-- Caixa de seleção específica para filtrar vagas temporárias -->
                     <input type="checkbox" name="check_temp" id="check_temp"> Temporário <!-- Rótulo visível para opção Temporário -->
-                </label> <!-- Fecha a tag <label> da opção Temporário -->
-            </div> <!-- Fecha o container <div> dos filtros por Tipo de Vaga -->
+
+                </label> 
+            </div> 
 
             <!-- Bloco para agrupamento dos filtros por área -->
             <div class="filtros__itens"> <!-- <div> com classe CSS para organizar as opções do filtro de Área -->
+
                 <p>Área</p> <!-- <p> define o título/rótulo do grupo de filtros por área de atuação -->
 
                 <!-- <label> associa o rótulo ao campo de seleção id="check_eng" -->
                 <label for="check_eng">
+
                     <!-- Caixa de seleção específica para filtrar a área de Engenharia -->
                     <input type="checkbox" name="check_eng" id="check_eng"> Engenharia <!-- Rótulo visível para opção Engenharia -->
+
                 </label> <!-- Fecha a tag <label> da opção Engenharia -->
 
                 <!-- <label> associa o rótulo ao campo de seleção id="check_design" -->
                 <label for="check_design">
+
                     <!-- Caixa de seleção específica para filtrar a área de Design -->
                     <input type="checkbox" name="check_design" id="check_design"> Design <!-- Rótulo visível para opção Design -->
+
                 </label> <!-- Fecha a tag <label> da opção Design -->
 
                 <!-- <label> associa o rótulo ao campo de seleção id="check_gestao" -->
                 <label for="check_gestao">
                     <!-- Caixa de seleção específica para filtrar a área de Gestão -->
+
                     <input type="checkbox" name="check_gestao" id="check_gestao"> Gestão <!-- Rótulo visível para opção Gestão -->
-                </label> <!-- Fecha a tag <label> da opção Gestão -->
-            </div> <!-- Fecha a <div> agrupadora dos filtros por Área -->
+
+                </label> 
+                
+            </div> 
+            
         </aside>
+
     <!-- Fecha o bloco de conteúdo principal da página -->
     </main>
 
@@ -177,10 +217,13 @@
 
         <!-- Bloco para organizar o formulário de inscrição -->
         <div class="cadastro">
+
             <!-- <form> cria um formulário para coleta de dados do usuário -->
             <form action="">
+
                 <!-- <input type="email"> cria um campo de entrada para digitação de e-mail (placeholder exibe o texto de dica/exemplo dentro do campo) -->
                 <input type="email" name="" id="" placeholder="seu@mail.com">
+                
                 <button class="btn">Assinar</button> <!-- Botão para enviar os dados do formulário -->
             </form>
         </div>
