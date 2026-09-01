@@ -11,6 +11,12 @@
 body {
     background-color: #fafaf9; /* Define a cor de fundo da página para um tom off-white/cinza bem claro */
     color: #111111; /* Define a cor padrão do texto para um cinza escuro/quase preto */
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
 }
 
 /* Estiliza o cabeçalho no topo do site */
@@ -59,20 +65,69 @@ header {
 /* Estiliza a seção que agrupa a lista de vagas */
 .vagas {
     width: 100%; /* Faz a lista de vagas ocupar 100% da largura disponível */
+    padding-left: 40px; /* Adiciona um espaçamento interno de 40 pixels à esquerda da lista de vagas */;
 }
 
 /* Estiliza o topo da lista de vagas (título e contador) */
 .vagas__header {
     display: flex; /* Ativa o layout Flexbox */
     justify-content: space-between; /* Coloca o título à esquerda e o contador à direita */
+    margin-bottom: 40px; /* Adiciona um espaçamento de 40 pixels abaixo do cabeçalho da lista de vagas */
 }
 
 /* Estiliza cada cartão individual de vaga */
 .vagas__card {
     display: flex; /* Ativa o layout Flexbox para organizar logo, detalhes e ação */
     justify-content: space-between; /* Espaça as informações internas entre as extremidades do cartão */
+    align-items: center;
     width: 100%; /* Faz o cartão de vaga ocupar toda a largura da seção de vagas */
+    padding: 16px;
+    margin: 8px 0; /* Adiciona um espaçamento de 8 pixels acima e abaixo do cartão */;
+    color: #999999;
+    background-color: #e5e5e3;
+    border: 1px solid #eddddd;
+    border-radius: 8px; /* Arredonda os cantos do cartão em 8 pixels */
 }
+.vagas__avatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60%;
+    margin: 8px;;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+
+}
+.vagas_body{
+    width: 100%;
+    padding-left: 40px;;
+}
+
+.vagas__badges{
+    padding: 4px 8px;
+    background-color: #e5e5e3;
+    color: #111111;
+    border-radius: 4px;
+}
+
+.vagas__bagdes--highlight{
+    border: 1px solid #999999;
+}
+.vagas__title{
+    color: #333;
+    padding-bottom: 16px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.vagas__actions{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
 
 /* Estiliza o menu lateral de filtros */
 .filtros {
@@ -129,4 +184,30 @@ footer {
     display: flex; /* Ativa o layout Flexbox */
     justify-content: space-between; /* Espaça o texto de copyright e os links de navegação nas pontas */
     padding: 16px 40px; /* Define o espaçamento interno: 16px em cima/embaixo e 40px nas laterais */
+}
+@media (max-width: 768px) {
+    .filtros {
+        display: none; /* Oculta a barra lateral de filtros em telas menores que 768px */
+    }
+
+    .vagas__header{
+        flex-direction: column;
+        align-items: start;
+    }
+    .vagas__card{
+        flex-direction: column;
+        align-items: start;
+
+    }
+    .vagas_body{
+        padding-left: 10px;
+        padding-bottom: 40px;
+    }
+    .vagas__actions{
+        width: 100%;
+        padding: 10px;
+        flex-direction: row;
+        justify-content: space-between;
+        border-top: 1px solid #e5e5e3;
+    }
 }

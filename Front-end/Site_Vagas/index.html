@@ -17,6 +17,9 @@
 
     <!-- Tag <link> que conecta a folha de estilos externa CSS ao documento HTML -->
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <!-- Fecha a seção de configurações da página -->
 </head>
@@ -56,15 +59,54 @@
             <div class="vagas__card">
                 <img src="" alt="logo"> <!-- <img> exibe uma imagem (o atributo src define o caminho e o alt é o texto alternativo caso a imagem não carregue) -->
                 <!-- Grupo de informações textuais e metadados da vaga -->
-                <div>
+                 <div class="vagas__avatar">V</div>
+                <div class="vagas_body">
                     <small>Vercel</small> <!-- <small> deixa o texto em uma escala menor (útil para nomes de empresas, notas ou detalhes) -->
-                    <p>Full-stack Engineer</p>
+                    <p class="vagas__title">Full-stack Engineer</p>
                     <!-- Metadados da vaga: faixa salarial e modalidade -->
-                    <span>R$ 20k-30k</span>
-                    <span>Remoto</span>
+                    <span class="vagas__bagdes">R$ 20k-30k</span>
+                    <span class="vagas__bagdes vagas__bagdes--highlight">Remoto</span>
                 </div>
                 <!-- Grupo com o tempo de publicação e link de candidatura -->
-                <div>
+                <div class="vagas__actions">
+                    <span>4h</span>
+                    <a href="">Candidatar-se</a> <!-- Link direto para aplicação na vaga -->
+                </div>
+            </div>
+
+             <!-- Bloco de cartão/card contendo as informações de uma vaga individual -->
+            <div class="vagas__card">
+                <img src="" alt="logo"> <!-- <img> exibe uma imagem (o atributo src define o caminho e o alt é o texto alternativo caso a imagem não carregue) -->
+                <!-- Grupo de informações textuais e metadados da vaga -->
+                 <div class="vagas__avatar">V</div>
+                <div class="vagas_body">
+                    <small>Vercel</small> <!-- <small> deixa o texto em uma escala menor (útil para nomes de empresas, notas ou detalhes) -->
+                    <p class="vagas__title">Full-stack Engineer</p>
+                    <!-- Metadados da vaga: faixa salarial e modalidade -->
+                    <span class="vagas__bagdes">R$ 20k-30k</span>
+                    <span class="vagas__bagdes vagas__bagdes--highlight">Remoto</span>
+                </div>
+                <!-- Grupo com o tempo de publicação e link de candidatura -->
+                <div class="vagas__actions">
+                    <span>4h</span>
+                    <a href="">Candidatar-se</a> <!-- Link direto para aplicação na vaga -->
+                </div>
+            </div>
+
+             <!-- Bloco de cartão/card contendo as informações de uma vaga individual -->
+            <div class="vagas__card">
+                <img src="" alt="logo"> <!-- <img> exibe uma imagem (o atributo src define o caminho e o alt é o texto alternativo caso a imagem não carregue) -->
+                <!-- Grupo de informações textuais e metadados da vaga -->
+                 <div class="vagas__avatar">V</div>
+                <div class="vagas_body">
+                    <small>Vercel</small> <!-- <small> deixa o texto em uma escala menor (útil para nomes de empresas, notas ou detalhes) -->
+                    <p class="vagas__title">Full-stack Engineer</p>
+                    <!-- Metadados da vaga: faixa salarial e modalidade -->
+                    <span class="vagas__bagdes">R$ 20k-30k</span>
+                    <span class="vagas__bagdes vagas__bagdes--highlight">Remoto</span>
+                </div>
+                <!-- Grupo com o tempo de publicação e link de candidatura -->
+                <div class="vagas__actions">
                     <span>4h</span>
                     <a href="">Candidatar-se</a> <!-- Link direto para aplicação na vaga -->
                 </div>
