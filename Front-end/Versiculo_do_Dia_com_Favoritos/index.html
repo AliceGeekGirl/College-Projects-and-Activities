@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Configurações básicas da página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versículo do dia + Favoritos</title>
+
+    <!-- Importação do arquivo CSS externo com os estilos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho principal com o título da aplicação -->
+    <header>
+        <h1>Versículos do Dia + Favoritos</h1>
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <main>
+        <!-- Seção responsável por exibir o versículo diário -->
+        <section>
+            <h2>Versículo de Hoje</h2>
+            <div>
+                <!-- Texto do versículo -->
+                <p id="texto-versiculo">Porque Deus amou o mundo de tal maneira que deu o seu Filho Unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna.</p>
+
+                <!-- Livro, capítulo e versículo correspondente -->
+                <span id="referencia">João 3:16</span>
+                
+                <!-- Botões para interações do usuário (copiar e salvar) -->
+                <button id="btn-copiar">Copiar</button>
+                <button id="btn-favoritar">Favoritar</button>
+            </div>
+        </section>
+
+        <!-- Seção para listar os versículos salvos pelo usuário -->
+        <section>
+            <h2>Meus Favoritos</h2>
+            
+            <!-- Lista que será preenchida dinamicamente via JavaScript -->
+            <ul id="lista-favoritos">
+                
+            </ul>
+        </section>
+    </main>
+
+    <!-- Rodapé com informações da desenvolvedora e links de contato -->
+    <footer>
+        <p>Desenvolvido por Alice da Cruz Justi • 2026</p>
+        <a href="https://github.com/AliceGeekGirl">Meu Github</a>
+        <a href="https://www.linkedin.com/in/alice-da-cruz-justi-37580438a/">Meu Linkedin</a>
+    </footer>
+
+</body>
+</html>
