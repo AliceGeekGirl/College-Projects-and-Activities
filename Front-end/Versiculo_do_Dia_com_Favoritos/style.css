@@ -1,0 +1,137 @@
+/* =========================
+   Reset e estilos globais
+   ========================= */
+
+/* O * seleciona TODOS os elementos */
+/* Remove margens e paddings padrão e define box-sizing para facilitar o layout */
+* {
+    margin: 0;  /* remove margem externa padrão de todos os elementos */
+    padding: 0; /* remove preenchimento interno padrão de todos os elementos */
+    box-sizing: border-box; /* faz padding e borda entrarem no tamanho total do elemento */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif; /* define a fonte padrão da página */
+    background-color: antiquewhite; /* cor de fundo*/
+    color: black; /* cor padrão do texto */
+    /* margin e largura ficam por conta do container (main) */
+}
+
+/* Container principal: limita a largura e centraliza o conteúdo */
+main {
+    max-width: 500px; /* largura máxima do conteúdo */
+    margin: 0 auto; /* 0 em cima/baixo, auto nas laterais para centralizar */
+    padding: 0; /* garante que não haja padding extra no container */
+}
+
+/* =========================
+   Cabeçalho
+   ========================= */
+
+.cabecalho {
+    text-align: center; /* centraliza o texto (título) dentro do cabeçalho */
+    background-color: rgb(255, 213, 199); 
+    padding: 16px; /* espaço interno para o título não ficar colado nas bordas */
+    margin: 0; /* garante que não haja margem externa extra */
+}
+
+/* =========================
+   Card do versículo
+   ========================= */
+
+.versiculo-card {
+    background-color: floralwhite; 
+    padding: 16px; /* espaço interno do card */
+    margin: 16px; /* espaço externo do card em relação aos outros elementos */
+    border: 2px solid black; /* borda preta ao redor do card */
+    border-radius: 15px; /* arredonda as bordas do card */
+}
+
+/* Texto do versículo: tamanho e espaçamento entre linhas */
+#texto-versiculo {
+    font-size: large; /* aumenta o tamanho da fonte do texto do versículo */
+    line-height: 1.5; /* aumenta o espaçamento entre linhas para melhorar a leitura */
+    margin-bottom: 8px; /* separa um pouco do texto da referência */
+    padding: 0; /* garante que não haja padding extra no parágrafo */
+}
+
+/* Referência do versículo: itálico e cor mais suave */
+#referencia {
+    font-style: italic; /* deixa o texto em itálico */
+    color: rgb(53, 52, 52); /* cor mais suave para a referência */
+    font-size: large; /* tamanho da fonte da referência */
+    display: block; /* força quebra de linha depois do texto */
+    margin-bottom: 16px; /* espaço antes dos botões */
+    margin-top: 0; /* garante que não haja margem superior extra */
+    padding: 0; /* sem padding extra na referência */
+}
+
+/* =========================
+   Botões (estilo unificado)
+   ========================= */
+
+/* Classe base para os botões: evita repetir código */
+.btn {
+    background-color: rgb(255, 213, 199); 
+    border: 1px solid rgb(241, 203, 168); /* cor e espessura da borda dos botões */
+    border-radius: 15px;
+    cursor: pointer; /* muda o cursor para “mãozinha” ao passar o mouse */
+    padding: 8px 16px; /* espaço interno: 8px em cima/baixo, 16px nas laterais */
+    margin-right: 8px; /* espaço entre os botões na horizontal */
+    margin-bottom: 8px; /* espaço entre os botões caso fiquem um embaixo do outro */
+}
+
+/* Efeito ao passar o mouse em qualquer botão */
+button:hover {
+    background-color: rgb(252, 183, 160); /* muda a cor de fundo ao passar o mouse */
+}
+
+/* =========================
+   Seção de favoritos
+   ========================= */
+
+.secao-favoritos {
+    padding: 16px; /* espaço interno da seção de favoritos */
+    margin: 0; /* garante que não haja margem externa extra na seção */
+}
+
+/* Título da seção de favoritos */
+#titulo-favoritos {
+    margin-bottom: 20px; /* espaço abaixo do título para separar da lista */
+    margin-top: 0; /* garante que não haja margem superior extra */
+    font-weight: bold; /* deixa o texto do título em negrito */
+    padding: 0; /* sem padding extra no título */
+}
+
+/* Lista de favoritos: sem marcadores e com pouco padding */
+#lista-favoritos {
+    list-style: none; /* remove os marcadores (bolinhas) da lista */
+    padding: 8px; /* espaço interno da lista */
+    margin: 0; /* garante que não haja margem externa extra na lista */
+}
+
+/* =========================
+   Rodapé
+   ========================= */
+
+.rodape {
+    background-color: rgb(255, 196, 176);
+    text-align: center; /* centraliza o texto e os links */
+    padding: 16px; /* espaço interno do rodapé */
+    margin-top: 24px; /* afasta o rodapé do conteúdo principal */
+    margin-bottom: 0; /* garante que não haja margem inferior extra */
+}
+
+/* Links do rodapé (e de toda a página, por enquanto) */
+a {
+    color: rgb(214, 81, 103); 
+    text-decoration: none; /* remove o sublinhado padrão dos links */
+    margin: 0 8px; /* espaço horizontal entre os links */
+    padding: 0; /* sem padding extra nos links */
+}
+
+/* Efeito ao passar o mouse nos links */
+a:hover {
+    color: rgb(206, 56, 81); /* muda a cor do link ao passar o mouse */
+    text-decoration: underline; /* sublinha o link apenas no hover */
+}
