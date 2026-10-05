@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Configurações básicas da página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versículo do dia + Favoritos</title>
+
+    <!-- Importação do arquivo CSS externo com os estilos -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Importação do arquivo JavaScript externo com os comandos -->
+    <!--O 'defer' avisa o navegador para baixar o arquivo, mas só rodá-lo depois que o HTML todo for carregado-->
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Cabeçalho principal com o título da aplicação -->
+    <header class="cabecalho">
+        <h1>Versículos do Dia + Favoritos</h1>
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <main>
+        <!-- Seção responsável por exibir o versículo diário -->
+        <section>
+            <div class="versiculo-card">
+                <h2>Versículo de Hoje</h2>
+
+                <!-- Texto do versículo -->
+                <p id="texto-versiculo">Porque Deus amou o mundo de tal maneira que deu o seu Filho Unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna.</p>
+
+                <!-- Livro, capítulo e versículo correspondente -->
+                <span id="referencia">João 3:16</span>
+
+                <!-- Botões para interações do usuário (copiar e salvar) -->
+                <button id="btn-copiar" class="btn">Copiar</button>
+                <button id="btn-favoritar" class="btn">Favoritar</button>
+            </div>
+        </section>
+
+        <!-- Seção para listar os versículos salvos pelo usuário -->
+        <section class="secao-favoritos">
+            <h2 id="titulo-favoritos">Meus Favoritos</h2>
+            
+            <!-- Lista que será preenchida dinamicamente via JavaScript -->
+            <ul id="lista-favoritos">
+                
+            </ul>
+        </section>
+    </main>
+
+    <!-- Rodapé com informações da desenvolvedora e links de contato -->
+    <footer class="rodape">
+        <p>Desenvolvido por Alice da Cruz Justi • 2026</p>
+        <a class="github" href="https://github.com/AliceGeekGirl">Meu Github</a>
+        <a class="linkedin" href="https://www.linkedin.com/in/alice-da-cruz-justi-37580438a/">Meu Linkedin</a>
+    </footer>
+
+</body>
+</html>
