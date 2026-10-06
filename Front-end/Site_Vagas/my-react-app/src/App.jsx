@@ -4,6 +4,10 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 
+function Welcome({ name }) {
+  return <h1>Welcome, {name}!</h1>
+}
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -16,7 +20,7 @@ function App() {
           <img src={viteLogo} className="vite" alt="Vite logo" />
         </div>
         <div>
-          <h1>Get started</h1>
+          <h1>Aula React-Frontend</h1>
           <p>
             Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
           </p>
