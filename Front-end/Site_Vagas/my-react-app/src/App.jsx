@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import Welcome from './components/Welcome'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,6 +12,13 @@ function App() {
         <div>
           <Welcome name="Alice" />
         </div>
+        <button
+          type="button"
+          className="counter"
+          onClick={() => setCount((count) => count + 1)}
+        >
+          Contador é {count}
+        </button>
       </section>
     </>
   )
