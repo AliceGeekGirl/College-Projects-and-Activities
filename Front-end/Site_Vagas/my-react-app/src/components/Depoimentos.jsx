@@ -1,4 +1,4 @@
-export default function Depoimentos() {
+function Depoimentos() {
     return (
         <section className="depoimentos">
             <h2>Quem já usa o OpenBoard</h2>
@@ -26,3 +26,5 @@ export default function Depoimentos() {
         </section>
     )
 }
+
+export default Depoimentos
