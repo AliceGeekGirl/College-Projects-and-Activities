@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 import Welcome from './components/Welcome'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -8,14 +10,7 @@ function App() {
   return (
     <>
       {/* Cabeçalho principal do site (menu superior/topo) */}
-      <header>
-        <h1>OpenBoard</h1> {/* Título principal da marca no cabeçalho */}
-        {/* Container <div> para agrupar as ações de navegação e botão do topo */}
-        <div>
-          <a href="">Entrar</a> {/* Link de navegação para a página de login */}
-          <button className="btn">Publicar vaga $299</button> {/* Botão para a ação de publicar uma vaga com o valor */}
-        </div>
-      </header>
+      <Header />
 
       {/* <section> define uma seção temática da página (neste caso, o banner principal de apresentação) */}
       <section className="hero">
@@ -241,20 +236,7 @@ function App() {
       </section>
 
       {/* <footer> define o rodapé institucional no final da página */}
-      <footer>
-        {/* Texto com o nome da marca e direitos autorais */}
-        <p>
-          <strong>OpenBoard</strong> 2026 - Todos os direitos reservados
-        </p>
-
-        {/* <nav> indica um bloco dedicado à navegação principal ou secundária de links */}
-        <nav>
-          <a href="">Entrar</a> {/* Link de navegação secundária para a página de login */}
-          <a href="">Publicar vaga</a> {/* Link direto para o fluxo de contratação/publicação */}
-          <a href="">Sobre</a> {/* Link para a página institucional/sobre a plataforma */}
-          <a href="">Privacidade</a> {/* Link para os termos de uso e política de privacidade */}
-        </nav>
-      </footer>
+      <Footer />
     </>
   )
 }
