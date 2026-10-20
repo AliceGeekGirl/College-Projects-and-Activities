@@ -1,4 +1,4 @@
-export default function Cadastro() {
+function News() {
     return (
         <section className="hero">
             <h2>Vagas novas, toda quinta-feira</h2>
@@ -12,3 +12,5 @@ export default function Cadastro() {
         </section>
     )
 }
+
+export default News
