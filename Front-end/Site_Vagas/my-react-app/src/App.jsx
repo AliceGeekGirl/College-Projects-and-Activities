@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './App.css'
-import Welcome from './components/Welcome'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Hero from './components/Hero'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,13 +12,7 @@ function App() {
       {/* Cabeçalho principal do site (menu superior/topo) */}
       <Header />
 
-      {/* <section> define uma seção temática da página (neste caso, o banner principal de apresentação) */}
-      <section className="hero">
-        <h2>As melhores vagas em startups de tecnologia</h2> {/* <h2> é um título secundário (subtítulo) da seção */}
-        <p>Encontre oportunidades reais em empresas curadas. Sem cadastro, sem barreiras.</p> {/* <p> define um parágrafo de texto comum */}
-        <button className="btn">Publicar vaga $299</button> {/* Botão para publicação de vaga no banner principal */}
-      </section>
-
+      <Hero />    
       {/* O <main> engloba o conteúdo principal e mais importante da página */}
       <main className="conteudo">
 
