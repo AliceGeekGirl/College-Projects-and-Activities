@@ -37,7 +37,7 @@ function App() {
       </main>
 
       {/* Exibe a seção de notícias/novidades */}
-      <News />
+      <News></News>
 
       {/* Exibe a seção de depoimentos de clientes ou usuários */}
       <Depoimentos />
