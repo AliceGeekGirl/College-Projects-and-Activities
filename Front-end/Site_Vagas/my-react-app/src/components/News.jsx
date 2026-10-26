@@ -1,5 +1,26 @@
+import { useState } from "react"
+import Hero from "./Hero"
+
 //Função que define o componente React chamado News
 function News() {
+    const [email, setEmail] = useState('') //Cria um estado para armazenar o e-mail do usuário
+    const [erro, setErro] = useState(''); //Cria um estado para armazenar mensagens de erro relacionadas ao e-mail
+    const [enviado, setEnviado] = useState(false) //Cria um estado para indicar se o e-mail foi enviado com sucesso
+
+    //Função que lida com o envio do formulário de e-mail
+    function handleSubmit(e) {
+        e.preventDefault(); // não recarrega a página
+
+            //Valida se o e-mail contém o caractere '@' para verificar se é um e-mail válido
+            if (!email.includes('@')) { 
+                setErro('Digite um e-mail válido.'); //Se o e-mail não for válido, define uma mensagem de erro
+                return;
+            }
+
+            //Se o e-mail for válido, limpa a mensagem de erro e marca como enviado com sucesso
+            setErro('');
+            setEnviado(true);
+    }
     return (
 
         //Seção principal do componente (usada como destaque/hero)
