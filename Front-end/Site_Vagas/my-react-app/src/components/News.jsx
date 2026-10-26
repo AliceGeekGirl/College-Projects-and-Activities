@@ -23,6 +23,28 @@ function News() {
     }
     return (
         <>
+        <Hero
+         titulo=""
+         subtitulo="">
+
+        //Exibe uma mensagem de sucesso se o e-mail foi enviado, caso contrário, exibe o formulário de cadastro
+        {enviado ? (
+            <p className="sucesso">Pronto! Enviaremos para {email}.</p>
+        ) : ( 
+            <div className="cadastro">
+
+            //Formulário de cadastro de e-mail com validação
+            <form onSubmit={handleSubmit} noValidate>
+                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} /> //Campo de entrada para o e-mail, atualiza o estado 'email' conforme o usuário digita
+                <button className="btn">Assinar</button>
+            </form>
+
+            //Exibe uma mensagem de erro se houver algum problema com o e-mail fornecido
+            {erro && <p className="erro">{erro}</p>}
+            </div>
+        )}
+
+        </Hero>
         //Seção principal do componente (usada como destaque/hero)
         <section className="hero">
 
@@ -32,19 +54,6 @@ function News() {
             {/* Breve descrição sobre o conteúdo da newsletter */}
             <p>Um resumo curto das melhores vagas em startups direto no seu inbox.</p>
             
-            {/* Container que envolve o formulário de cadastro */}
-            <div className="cadastro">
-
-                {/* Formulário para o usuário inserir o e-mail */}
-                <form action="">
-                    
-                    {/* Campo de entrada para digitar o e-mail */}
-                    <input type="email" placeholder="seu@mail.com" />
-                    
-                    {/* Botão de envio para confirmar a assinatura */}
-                    <button className="btn">Assinar</button>
-                </form>
-            </div>
         </section>
         </>
     )
