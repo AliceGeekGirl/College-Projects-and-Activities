@@ -1,4 +1,4 @@
-function VagaCard({ empresa, cargo, salario, modelo, publicada }) {
+function VagaCard({empresa, cargo, salario, modelo, publicada}) {
 return (
     <div className="vagas__card">
       <div className="vagas__avatar">{empresa[0]}</div>
