@@ -10,6 +10,25 @@ const vagas = [
     area: 'Engenharia',  
     publicada: '4h',
   },
-// ... mais 6 vagas
+  {
+    id: 2,
+    empresa: 'SATC',
+    cargo: 'Front-end Engineer',
+    salario: 'R$ 20k-30k',
+    modelo: 'Remoto',
+    tipo: 'Efetivo',     
+    area: 'Engenharia',  
+    publicada: '2h',
+  },
+  {
+    id: 3,
+    empresa: 'Google',
+    cargo: 'Analista de Dados',
+    salario: 'R$ 20k-30k',
+    modelo: 'Remoto',
+    tipo: 'Efetivo',     
+    area: 'Dados',  
+    publicada: '6h',
+  }
 ];
 export default vagas;
