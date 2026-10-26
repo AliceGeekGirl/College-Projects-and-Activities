@@ -24,7 +24,10 @@ function App() {
       <Header />
 
       {/* Exibe a seção de destaque (banner principal) */}
-      <Hero />
+      <Hero 
+       titulo="As melhores vagas em startups de tecnologia"
+       subtitulo="Encontre oportunidades reais em empresas curadas. Sem cadastro, sem barreiras." >
+      </Hero>
       
       {/* Tag semântica HTML para indicar o conteúdo principal da página */}
       <main className="conteudo">
