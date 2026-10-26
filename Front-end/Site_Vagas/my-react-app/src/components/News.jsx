@@ -9,7 +9,7 @@ function News() {
 
     //Função que lida com o envio do formulário de e-mail
     function handleSubmit(e) {
-        e.preventDefault(); // não recarrega a página
+        e.preventDefault(); // Previne o comportamento padrão do formulário (recarregar a página)
 
             //Valida se o e-mail contém o caractere '@' para verificar se é um e-mail válido
             if (!email.includes('@')) { 
@@ -22,7 +22,7 @@ function News() {
             setEnviado(true);
     }
     return (
-
+        <>
         //Seção principal do componente (usada como destaque/hero)
         <section className="hero">
 
@@ -46,6 +46,7 @@ function News() {
                 </form>
             </div>
         </section>
+        </>
     )
 }
 
