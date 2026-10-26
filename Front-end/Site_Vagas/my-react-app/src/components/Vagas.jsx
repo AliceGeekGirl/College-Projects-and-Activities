@@ -1,69 +1,26 @@
-//Função que define o componente React chamado Vagas
+import vagas from '../data/vagas'; // Ajuste o caminho se necessário (ex: './data/vagas')
+import VagaCard from './VagaCard'; // Importa o componente do card que criamos acima
+
+// Função que define o componente React chamado Vagas
 function Vagas() {
     return (
         <>
             {/* Seção principal que lista todas as vagas */}
             <section className="vagas">
 
-                {/* Cabeçalho da seção: Título e quantidade total de vagas */}
+                {/* Cabeçalho da seção: Título e quantidade total de vagas automatizada */}
                 <div className="vagas__header">
                     <h2>Últimas Vagas</h2>
-                    <span>7 vagas - Atualizado agora</span>
+                    <span>{vagas.length} vagas - Atualizado agora</span>
                 </div>
 
-                {/* --- CARD 1: Vaga da Vercel --- */}
-                <div className="vagas__card"> 
-                    {/* Ícone ou foto com a inicial da empresa */}
-                    <div className="vagas__avatar">V</div>
-                    
-                    {/* Informações centrais da vaga (Empresa, Cargo e Tags/Badges) */}
-                    <div className="vagas_body">
-                        <small>Vercel</small>
-                        <p className="vagas__title">Full-stack Engineer</p>
-                        <span className="vagas__bagdes">R$ 20k-30k</span>
-                        <span className="vagas__bagdes vagas__bagdes--highlight">Remoto</span>
-                    </div>
-
-                    {/* Lado direito: Tempo de publicação e botão de ação */}
-                    <div className="vagas__actions">
-                        <span>4h</span>
-                        <a href="">Candidatar-se</a>
-                    </div>
-                </div>
-
-                {/* --- CARD 2: Vaga da Notion --- */}
-                <div className="vagas__card">
-                    <div className="vagas__avatar vagas__avatar--blue">N</div>
-                    
-                    <div className="vagas_body">
-                        <small>Notion</small>
-                        <p className="vagas__title">Backend Engineer</p>
-                        <span className="vagas__bagdes">R$ 22k-30k</span>
-                        <span className="vagas__bagdes vagas__bagdes--highlight">São Paulo</span>
-                    </div>
-
-                    <div className="vagas__actions">
-                        <span>1d</span>
-                        <a href="">Candidatar-se</a>
-                    </div>
-                </div>
-
-                {/* --- CARD 3: Vaga da Figma --- */}
-                <div className="vagas__card">
-                    <div className="vagas__avatar vagas__avatar--orange">F</div>
-                    
-                    <div className="vagas_body">
-                        <small>Figma</small>
-                        <p className="vagas__title">Design Systems Lead</p>
-                        <span className="vagas__bagdes">R$ 25k-35k</span>
-                        <span className="vagas__bagdes vagas__bagdes--highlight">New York</span>
-                    </div>
-
-                    <div className="vagas__actions">
-                        <span>2d</span>
-                        <a href="">Candidatar-se</a>
-                    </div>
-                </div>
+                <VagaCard
+                    empresa= "SATC"
+                    cargo= "Front-end Engineer"
+                    salario= "R$ 20k-30k"
+                    modelo= "Remoto"
+                    publicada= "2h">
+                </VagaCard>
 
             </section>
 
@@ -106,7 +63,7 @@ function Vagas() {
 
             </aside>
         </>
-    )
+    );
 }
 
 export default Vagas;
