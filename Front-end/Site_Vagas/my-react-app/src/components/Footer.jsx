@@ -1,18 +1,23 @@
+//Função que define o componente React chamado Footer
 function Footer() {
     return (
+
+        //Fragmento React (<> ... </>) para agrupar os elementos sem adicionar nós extras ao HTML
         <>
+            {/* Tag semântica que define o rodapé da página */}
             <footer>
-                {/* Texto com o nome da marca e direitos autorais */}
+
+                {/* Parágrafo contendo o nome da marca em destaque e o ano atual com os direitos reservados */}
                 <p>
-                <strong>OpenBoard</strong> 2026 - Todos os direitos reservados
+                    <strong>OpenBoard</strong> 2026 - Todos os direitos reservados
                 </p>
 
-                {/* <nav> indica um bloco dedicado à navegação principal ou secundária de links */}
+                {/* Bloco de navegação contendo os links secundários do rodapé */}
                 <nav>
-                <a href="">Entrar</a> {/* Link de navegação secundária para a página de login */}
-                <a href="">Publicar vaga</a> {/* Link direto para o fluxo de contratação/publicação */}
-                <a href="">Sobre</a> {/* Link para a página institucional/sobre a plataforma */}
-                <a href="">Privacidade</a> {/* Link para os termos de uso e política de privacidade */}
+                    <a href="">Entrar</a> {/* Link para a página de login */}
+                    <a href="">Publicar vaga</a> {/* Link para a página de cadastro de vagas */}
+                    <a href="">Sobre</a> {/* Link para a página institucional */}
+                    <a href="">Privacidade</a> {/* Link para a política de privacidade */}
                 </nav>
             </footer>
         </>

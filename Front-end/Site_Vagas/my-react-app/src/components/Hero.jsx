@@ -1,11 +1,18 @@
+//Função que define o componente React chamado Hero
 function Hero() {
     return (
         <>
-           {/* <section> define uma seção temática da página (neste caso, o banner principal de apresentação) */}
+            {/* Seção principal de destaque (Hero Banner) */}
             <section className="hero">
-                <h2>As melhores vagas em startups de tecnologia</h2> {/* <h2> é um título secundário (subtítulo) da seção */}
-                <p>Encontre oportunidades reais em empresas curadas. Sem cadastro, sem barreiras.</p> {/* <p> define um parágrafo de texto comum */}
-                <button className="btn">Publicar vaga $299</button> {/* Botão para publicação de vaga no banner principal */}
+                
+                {/* Título principal da seção */}
+                <h2>As melhores vagas em startups de tecnologia</h2>
+                
+                {/* Breve descrição da proposta do site */}
+                <p>Encontre oportunidades reais em empresas curadas. Sem cadastro, sem barreiras.</p>
+                
+                {/* Botão de ação para empresas publicarem vagas */}
+                <button className="btn">Publicar vaga $299</button>
             </section>
         </>
     )
