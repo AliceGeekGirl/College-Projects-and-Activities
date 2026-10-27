@@ -1,37 +1,46 @@
-// Importa o componente responsável por renderizar cada card individual de vaga
+// Importa o hook useEffect do React para lidar com efeitos colaterais (como mudar o título da página)
+import { useEffect } from 'react';
+
+// Importa o componente responsável por renderizar cada card de vaga individualmente
 import VagaCard from './VagaCard'; 
 
-// Função que define o componente principal React chamado Vagas
+// Função que define o componente principal Vagas, recebendo a lista de vagas via propriedades (props)
 function Vagas({ vagas }) {
+
+    // Hook useEffect que roda após a renderização e toda vez que o número de vagas muda
+    useEffect(() => {
+        document.title = `${vagas.length} vagas | OpenBoard`; // Atualiza o título da aba do navegador
+    }, [vagas.length]); // Dependência: executa novamente apenas se a quantidade de vagas mudar
+
     return (
         <>
             {/* Seção principal que lista todas as vagas disponíveis */}
             <section className="vagas">
 
-                {/* Cabeçalho da seção: exibe o título e a quantidade total de vagas de forma dinâmica */}
+                {/* Cabeçalho com o título e a contagem dinâmica de vagas */}
                 <div className="vagas__header">
                     <h2>Últimas Vagas</h2>
                     <span>{vagas.length} vagas - Atualizado agora</span>
                 </div>
 
-                {/* Percorre o array de vagas e renderiza um VagaCard para cada item encontrado */}
+                {/* Percorre o array de vagas e renderiza um VagaCard para cada item */}
                 {vagas.map((vaga) => (
                     <VagaCard
-                        key={vaga.id}            // Identificador único obrigatório para listas no React
-                        empresa={vaga.empresa}   // Passa o nome da empresa como propriedade
-                        cargo={vaga.cargo}       // Passa o título do cargo como propriedade
-                        salario={vaga.salario}   // Passa a faixa salarial como propriedade
-                        modelo={vaga.modelo}     // Passa o modelo de trabalho (ex: Remoto) como propriedade
-                        publicada={vaga.publicada} // Passa o tempo de publicação como propriedade
+                        key={vaga.id}            // Chave única obrigatória para listas no React
+                        empresa={vaga.empresa}   // Nome da empresa
+                        cargo={vaga.cargo}       // Título do cargo
+                        salario={vaga.salario}   // Faixa salarial
+                        modelo={vaga.modelo}     // Modelo de trabalho (ex: Remoto)
+                        publicada={vaga.publicada} // Tempo desde a publicação
                     />
                 ))}
 
             </section>
 
-            {/* Barra lateral contendo os filtros para refinar a busca de vagas */}
+            {/* Barra lateral com os filtros para refinar a busca */}
             <aside className="filtros">
                 
-                {/* Cabeçalho da barra de filtros com opção para limpar as seleções */}
+                {/* Cabeçalho da área de filtros */}
                 <div className="filtros__header">
                     <h3>Filtros</h3>
                     <a href="">Limpar</a>
@@ -70,5 +79,5 @@ function Vagas({ vagas }) {
     );
 }
 
-// Exporta o componente Vagas para poder ser utilizado em outras partes da aplicação
+// Exporta o componente para ser utilizado em outros arquivos do projeto
 export default Vagas;
