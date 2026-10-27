@@ -1,4 +1,4 @@
-// Declara uma constante chamada 'depoimentos' que armazena uma lista (array) de objetos com avaliações/depoimentos
+//Declara uma constante chamada 'depoimentos' que armazena uma lista (array) de objetos com avaliações/depoimentos
 const depoimentos = [
   {
     id: 1,                                  // Identificador único do depoimento
