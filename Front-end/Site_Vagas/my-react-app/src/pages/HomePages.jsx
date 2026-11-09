@@ -4,6 +4,11 @@ import { useState, useEffect } from 'react';
 // Importa a função assíncrona que busca os dados de vagas da API/serviço
 import { buscarVagas } from '../services/vagasService';
 
+import Hero from './components/Hero'
+import Depoimentos from './components/Depoimentos'
+import News from './components/News'
+import Vagas from './components/Vagas'
+
 // Define o componente funcional chamado HomePage
 function HomePage() {
     // Cria o estado 'vagas' (iniciando com um array vazio) para armazenar a lista de vagas recebida
