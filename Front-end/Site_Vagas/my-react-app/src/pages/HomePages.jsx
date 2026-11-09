@@ -41,17 +41,17 @@ function HomePage() {
             <Hero titulo="As melhores vagas..." subtitulo="...">
                 <button className="btn">Publicar vaga $299</button>
             </Hero>
-      <main className="conteudo">
-        {loading && (
-          <p className="vagas__vazio">Carregando vagas...</p>
-        )}
-        {erro && <p className="erro">{erro}</p>}
-        {!loading && !erro && <Vagas vagas={vagas} />}
-      </main>
+            <main className="conteudo">
+                {loading && (
+                <p className="vagas__vazio">Carregando vagas...</p>
+                )}
+                {erro && <p className="erro">{erro}</p>}
+                {!loading && !erro && <Vagas vagas={vagas} />}
+            </main>
 
-      <News />
-      <Depoimentos />
-    </>
-  );
+            <News />
+            <Depoimentos />
+        </>
+    );
 }
 export default HomePage;
