@@ -36,4 +36,22 @@ function HomePage() {
     }, []); // Array de dependências vazio: indica que o efeito só deve rodar 1 única vez ao carregar o componente
 
     // Retorno do JSX (layout do componente - pode ser expandido conforme a necessidade)
+    return (
+        <>
+            <Hero titulo="As melhores vagas..." subtitulo="...">
+                <button className="btn">Publicar vaga $299</button>
+            </Hero>
+      <main className="conteudo">
+        {loading && (
+          <p className="vagas__vazio">Carregando vagas...</p>
+        )}
+        {erro && <p className="erro">{erro}</p>}
+        {!loading && !erro && <Vagas vagas={vagas} />}
+      </main>
+
+      <News />
+      <Depoimentos />
+    </>
+  );
 }
+export default HomePage;
