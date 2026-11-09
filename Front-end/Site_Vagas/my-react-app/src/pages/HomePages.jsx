@@ -42,21 +42,36 @@ function HomePage() {
 
     // Retorno do JSX (layout do componente - pode ser expandido conforme a necessidade)
     return (
+        // Fragmento do React (<>): agrupa múltiplos elementos sem criar uma <div> extra no HTML
         <>
+            {/* Componente de topo (Hero) passando título e subtítulo como propriedades */}
             <Hero titulo="As melhores vagas..." subtitulo="...">
+                {/* Botão de ação passado como filho (children) do componente Hero */}
                 <button className="btn">Publicar vaga $299</button>
             </Hero>
+            
+            {/* Tag HTML principal que envolve a lista de vagas e os estados de carregamento */}
             <main className="conteudo">
+                {/* Se a variável 'loading' for verdadeira, exibe a mensagem de carregando */}
                 {loading && (
                 <p className="vagas__vazio">Carregando vagas...</p>
                 )}
+                
+                {/* Se a variável 'erro' tiver algum valor, exibe a mensagem de erro */}
                 {erro && <p className="erro">{erro}</p>}
+                
+                {/* Se NÃO estiver carregando E NÃO houver erro, renderiza o componente Vagas passando a lista de vagas */}
                 {!loading && !erro && <Vagas vagas={vagas} />}
             </main>
 
+            {/* Componente que exibe a seção de notícias ou novidades */}
             <News />
+            
+            {/* Componente que exibe a seção de depoimentos de usuários/clientes */}
             <Depoimentos />
         </>
     );
 }
+
+// Exporta o componente HomePage como padrão para poder ser importado em outros arquivos
 export default HomePage;
