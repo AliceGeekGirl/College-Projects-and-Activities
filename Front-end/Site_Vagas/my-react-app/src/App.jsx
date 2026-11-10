@@ -6,7 +6,7 @@ import './App.css'
 
 import HomePage from './pages/HomePage';
 import VagaPage from './pages/VagaPage';
-import NaoEncontradaPage from './pages/NaoEncontradaPages';
+import NaoEncontradaPage from './pages/NaoEncontradaPage';
 import Layout from './components/Layout';
 
 function App() {
