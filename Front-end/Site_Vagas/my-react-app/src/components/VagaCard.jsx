@@ -1,5 +1,7 @@
+import { Link } from 'react-router';
+
 // Componente que desenha um card individual de vaga
-function VagaCard({ empresa, cargo, salario, modelo, publicada }) {
+function VagaCard({id, empresa, cargo, salario, modelo, publicada }) {
   return (
     <div className="vagas__card">
       {/* Pega a primeira letra da empresa para colocar no avatar */}
@@ -16,7 +18,7 @@ function VagaCard({ empresa, cargo, salario, modelo, publicada }) {
 
       <div className="vagas__actions">
         <span>{publicada}</span>
-        <a href="">Candidatar-se</a>
+        <Link to={`/vagas/${id}`}>Ver detalhes</Link>
       </div>
     </div>
   );
