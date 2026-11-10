@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage';
 import VagaPage from './pages/VagaPages';
 import NaoEncontradaPage from './pages/NaoEncontradaPages';
 import Layout from './components/Layout';
+import VagaPage from './pages/VagaPage';
 
 function App() {
   //Cria uma variável de estado 'count' (inicializada em 0) e a função 'setCount' para atualizá-la
