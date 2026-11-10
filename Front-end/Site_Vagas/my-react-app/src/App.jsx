@@ -5,7 +5,7 @@ import { Routes, Route } from 'react-router';
 import './App.css'
 
 import HomePage from './pages/HomePage';
-import VagaPage from './pages/VagaPages';
+import VagaPage from './pages/VagaPage';
 import NaoEncontradaPage from './pages/NaoEncontradaPages';
 import Layout from './components/Layout';
 

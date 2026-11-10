@@ -23,7 +23,9 @@ function VagaPage() {
             }
             carregar();
         }, [id]); // roda de novo se o id mudar
-
+    
+    if (loading) return <p className="pagina">Carregando...</p>;
+    if (erro) return <p className="pagina erro">{erro}</p>;
     // Retorno do JSX (layout do componente - pode ser expandido conforme a necessidade)
     return (
          <section className="pagina">
