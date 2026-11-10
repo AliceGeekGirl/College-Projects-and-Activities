@@ -4,14 +4,10 @@ import { Routes, Route } from 'react-router';
 //Importa o arquivo de estilos CSS para este componente
 import './App.css'
 
-//Importa os componentes individuais da aplicação
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Hero from './components/Hero'
-import Depoimentos from './components/Depoimentos'
-import News from './components/News'
-import Vagas from './components/Vagas'
-import vagas from './data/vagas' // Importa os dados das vagas do arquivo de dados
+import HomePage from './pages/HomePages';
+import VagaPage from './pages/VagaPages';
+import NaoEncontradaPage from './pages/NaoEncontradaPages';
+import Layout from './components/Layout';
 
 function App() {
   //Cria uma variável de estado 'count' (inicializada em 0) e a função 'setCount' para atualizá-la
