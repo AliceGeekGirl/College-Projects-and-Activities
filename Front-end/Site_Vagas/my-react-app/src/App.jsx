@@ -1,6 +1,6 @@
 //Importa o hook useState do React (usado para gerenciar estados)
 import { useState } from 'react'
-
+import { Routes, Route } from 'react-router';
 //Importa o arquivo de estilos CSS para este componente
 import './App.css'
 
@@ -20,30 +20,13 @@ function App() {
   return (
     //Fragment do React (<> ... </>) usado para agrupar múltiplos elementos sem criar uma <div> extra no HTML
     <>
-      {/* Exibe o cabeçalho/topo do site */}
-      <Header />
-
-      {/* Exibe a seção de destaque (banner principal) */}
-      <Hero 
-       titulo="As melhores vagas em startups de tecnologia"
-       subtitulo="Encontre oportunidades reais em empresas curadas. Sem cadastro, sem barreiras." >
-      </Hero>
-      
-      {/* Tag semântica HTML para indicar o conteúdo principal da página */}
-      <main className="conteudo">
-
-        {/* Exibe a lista ou seção de vagas dentro do conteúdo principal */}
-        <Vagas vagas={vagas} />
-      </main>
-
-      {/* Exibe a seção de notícias/novidades */}
-      <News></News>
-
-      {/* Exibe a seção de depoimentos de clientes ou usuários */}
-      <Depoimentos />
-
-      {/* Exibe o rodapé do site */}
-      <Footer />
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/vagas/:id" element={<VagaPage />} />
+          <Route path="*" element={<NaoEncontradaPage />} />
+        </Route>
+      </Routes>
     </>
   )
 }
