@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router';
 //Importa o arquivo de estilos CSS para este componente
 import './App.css'
 
-import HomePage from './pages/HomePages';
+import HomePage from './pages/HomePage';
 import VagaPage from './pages/VagaPages';
 import NaoEncontradaPage from './pages/NaoEncontradaPages';
 import Layout from './components/Layout';
